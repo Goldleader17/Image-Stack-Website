@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+html, body{
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    overflow: auto;
+}
+
+body{
+    background-color: #cfd9df;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+#jumbotron{
+    min-height:300px;
+    color: #fff;
+}
+div#jumbotron:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(./gallery.jpg) ;
+    background-size: cover;
+    background-position: center center;
+    filter: brightness(0.5);
+    z-index: -1;
+}
+
+#app-title{
+    color: #fff;
+    text-shadow: 0px 5px 7px #0000007e;
+    letter-spacing: .8px;
+    width: 100%;
+    max-width: 700px;
+    margin:auto;
+    margin-bottom: 15px;
+}  
+
+#app-description{
+    color: #fff;
+    width: 100%;
+    max-width: 700px;
+    margin:auto;
+    text-shadow: 0px 3px 5px #0000007e;
+    letter-spacing: .7px;
+    text-align: center;
+}  
+#seachbox-container{
+    width: 100%;
+    max-width: 750px;
+    margin:auto;
+}
+
+#seachbox-container .input-group input{
+    border-top-left-radius: 3em;
+    border-bottom-left-radius: 3em;
+}
+
+#seachbox-container .input-group button{
+    border-top-right-radius: 3em;
+    border-bottom-right-radius: 3em;
+}
+
+a.media-item {
+    position: relative;
+    display: block;
+    max-width: 33.33%;
+    padding: 10px;
+}
+a.media-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    box-shadow: 3px 6px 8px #00000052;
+}
+
+a.media-item .media-item-details-hover{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #00000041;
+}
+a.media-item:hover .media-item-details-hover{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    padding:15px 10px ;
+}
+
+a.media-item .media-item-details-hover .media-photographer{
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #fff;
+    text-shadow: 1px 3px 5px #00000091;
+}
+
+#preview-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-height: 75vh;
+    background: #d3dbdf;
+}
+#preview-media img {
+    height: 100%;
+    width: 100%;
+    object-fit: scale-down;
+    object-position: center center;
+}
